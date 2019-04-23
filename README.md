@@ -1,4 +1,4 @@
-# Configuration for the local IDE setup
+# Configuration for the local development environment
 
 ## Install Python packages with pip
 
