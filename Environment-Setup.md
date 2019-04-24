@@ -1,4 +1,4 @@
-# Environment Setup Notes
+# Environment Setup
 
 ## VIM configuration setup
 * Create a .vimrc file in the home directory
