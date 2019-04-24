@@ -1,3 +1,5 @@
+# IDE Settings
+
 ## Settings for the Visual Studio Code - settings.json
 ```
 {
