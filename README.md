@@ -51,6 +51,7 @@ export PATH=$PATH:$PYTHON_HOME/bin:$JAVA_HOME/bin:$M2_HOME/bin:$TERRAFORM_HOME
 sudo apt-get install openjdk-11-jdk
 sudo apt-get install openjdk-11-source
 ```
+
 ## Delete the docker images and containers
 ```
 docker system prune --volumes -f
@@ -58,3 +59,6 @@ docker rmi $(docker images -q)
 docker system prune -a
 
 ```
+
+## AWS Commands
+* Login into ECR - `$(aws ecr get-login --no-include-email)`
