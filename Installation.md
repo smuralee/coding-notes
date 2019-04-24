@@ -1,4 +1,4 @@
-# Installation
+# Installation Notes
 
 ## Install Python packages with pip
 ```
