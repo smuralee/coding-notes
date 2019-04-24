@@ -1,7 +1,6 @@
 # Configuration for the local development environment
 
 ## Install Python packages with pip
-
 ```
 pip install awscli --upgrade --user
 python -m pip install --user boto3
@@ -34,7 +33,6 @@ export PATH=$PATH:$PYTHON_HOME/bin:$JAVA_HOME/bin:$M2_HOME/bin:$TERRAFORM_HOME
 ```
 
 ## Settings for the Visual Studio Code - settings.json
-
 ```
 {
     "editor.fontSize": 20,
@@ -46,4 +44,10 @@ export PATH=$PATH:$PYTHON_HOME/bin:$JAVA_HOME/bin:$M2_HOME/bin:$TERRAFORM_HOME
     "workbench.iconTheme": "vscode-icons"
 }
 
+```
+
+## Setting up OpenJDK (with source) in Ubuntu 18.04 LTS
+```
+sudo apt-get install openjdk-11-jdk
+sudo apt-get install openjdk-11-source
 ```
