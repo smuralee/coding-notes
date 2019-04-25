@@ -1,4 +1,11 @@
-# Container Commands
+# Unix Terminal Commands
+
+## UNIX commands
+* Find directory or files recursively
+```
+find . -type d -name ".idea" -print
+find . -type f -name "*.iml" -print
+```
 
 ## Docker Commands
 
