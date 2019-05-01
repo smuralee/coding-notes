@@ -7,6 +7,13 @@ find . -type d -name ".idea" -print
 find . -type f -name "*.iml" -print
 ```
 
+* List all global packages of npm, pip and brew
+```
+npm list -g --depth 0
+pip list
+brew list
+```
+
 ## Docker Commands
 
 ### Delete the docker images and containers
