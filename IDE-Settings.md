@@ -9,7 +9,11 @@
     "markdown.preview.fontSize": 20,
     "workbench.colorTheme": "Dracula",
     "editor.minimap.enabled": false,
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "editor.formatOnSave": true
 }
 
 ```
