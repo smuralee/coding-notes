@@ -13,7 +13,24 @@
     "[typescript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
-    "editor.formatOnSave": true
+    "yaml.customTags": [
+        "!Base64 mapping",
+        "!Cidr sequence",
+        "!FindInMap sequence",
+        "!GetAtt",
+        "!GetAZs",
+        "!ImportValue",
+        "!Join sequence",
+        "!Ref",
+        "!Select sequence",
+        "!Split sequence",
+        "!Sub",
+        "!Transform mapping",
+        "!Not sequence",
+        "!Equals sequence"
+    ],
+    "editor.formatOnSave": true,
+    "vsicons.projectDetection.autoReload": true
 }
 
 ```
