@@ -22,3 +22,13 @@ export TERRAFORM_HOME=/opt/terraform-install
 export PATH=$PATH:$PYTHON_HOME/bin:$JAVA_HOME/bin:$M2_HOME/bin:$TERRAFORM_HOME
 
 ```
+
+## Setup a Python Virtual Environment
+```
+pip install virtualenv
+cd python-scripts
+virtualenv venv
+source venv/bin/activate
+pip install <package>
+deactivate
+```
