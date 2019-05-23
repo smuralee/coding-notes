@@ -14,6 +14,14 @@ pip list
 brew list
 ```
 
+* Update packages
+```
+npm i -g <package-name>
+pip install <package-name>
+brew install <package-name>
+
+```
+
 ## Docker Commands
 
 ### Delete the docker images and containers
