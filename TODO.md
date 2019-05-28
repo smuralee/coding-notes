@@ -26,8 +26,7 @@
 * EKS
 * CloudFront
 * ElastiCache
-* KMS
-* CloudHSM
+* KMS | CloudHSM
 * AWS Athena
 * AWS EMR
 * AWS CloudFormation | AWS CDK
@@ -36,3 +35,4 @@
 * Jenkins
 * Languages: Java | Python | Typescript
 * Scripting: Bash | VIM
+* CLI: AWS CLI | Python Boto3
