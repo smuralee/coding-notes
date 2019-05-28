@@ -27,7 +27,7 @@
 * CloudFront
 * ElastiCache
 * KMS
-* HSM
+* CloudHSM
 * AWS Athena
 * AWS EMR
 * AWS CloudFormation | AWS CDK
