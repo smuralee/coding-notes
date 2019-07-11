@@ -13,30 +13,8 @@
     "[typescript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
-    "yaml.customTags": [
-        "!And",
-        "!If",
-        "!Not",
-        "!Equals",
-        "!Or",
-        "!Base64",
-        "!Cidr",
-        "!FindInMap sequence",
-        "!GetAtt",
-        "!GetAZs",
-        "!ImportValue",
-        "!Join sequence",
-        "!Ref",
-        "!Select sequence",
-        "!Split",
-        "!Sub",
-        "!Transform mapping",
-        "!Not sequence",
-        "!Equals sequence"
-    ],
-    "editor.formatOnSave": true,
-    "yaml.format.enable": true,
-    "vsicons.projectDetection.autoReload": true
+    "vsicons.projectDetection.autoReload": true,
+    "editor.formatOnSave": true
 }
 
 ```
