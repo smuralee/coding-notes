@@ -1,4 +1,4 @@
-# VPC - TGW
+# VPC and Transit Gateway
 
 ## Understanding IP ranges
 
