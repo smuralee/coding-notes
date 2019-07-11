@@ -1,6 +1,7 @@
-# Quick Reference
+# Index
 
-1. [Environment setup](Environment-Setup.md)
-2. [Installation](Installation.md)
-3. [Unix terminal commands](Unix-Terminal-Commands.md)
-4. [IDE settings](IDE-Settings.md)
+1. [Installation notes](installation-notes.md)
+2. [Environment setup notes](environment-setup-notes.md)
+3. [Unix commands notes](unix-commands-notes.md)
+4. [IDE settings notes](ide-settings-notes.md)
+5. [AWS notes](./aws-notes/README.md)
