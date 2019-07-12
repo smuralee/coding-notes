@@ -6,10 +6,10 @@
 * Supporting .tf file as YAML
 
 ```shell
-  filetype plugin indent on
-  syntax on
-  set number
-  autocmd BufEnter *.tf :setlocal filetype=yaml
+filetype plugin indent on
+syntax on
+set number
+autocmd BufEnter *.tf :setlocal filetype=yaml
   
 ```
 

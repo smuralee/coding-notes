@@ -24,6 +24,7 @@ brew install <package-name>
 ## Docker Commands
 
 * Delete the docker images and containers
+
 ```shell
 docker system prune --volumes -f
 docker rmi $(docker images -q)
@@ -34,6 +35,7 @@ docker system prune -a
 ## AWS Commands
 
 * Login into ECR
+
 ```shell
 $(aws ecr get-login --no-include-email)
 ```
