@@ -30,6 +30,7 @@
     | ----------- | ------ |
     | 10.0.0.0/16 | local  |
     | 0.0.0.0/0   | vgw-id |
+    
     **Figure-2**: Public subnet route table
                          
 - Traffic destined for the intenet is targeted for the internet gateway. If you are having the public subnet, any traffic outside the VPC should be going to the internet gateway
@@ -38,6 +39,7 @@
     | ----------- | ------ |
     | 10.0.0.0/16 | local  |
     | 0.0.0.0/0   | igw-id |
+    
     **Figure-3**: Private subnet route table
 
 - **To enable instances in a private subnet to connect to the Internet, you can create a NAT gateway or launch a NAT instance in a public subnet**, and then add a route for the private subnet that routes IPv4 Internet traffic (0.0.0.0/0) to the NAT device
