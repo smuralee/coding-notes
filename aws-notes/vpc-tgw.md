@@ -8,11 +8,11 @@
 | B     | 16            | 16                 | (2<sup>16-2</sup>)|
 | C     | 24            | 8                  | (2<sup>24-3</sup>)|
 
-**CIDR block format** - **a.b.c.d/n**
+**Figure-1**: IP Address Classes
 
-*Examples*: 10.192.0.0/16, 10.192.10.0/24 .....
 
-**Number of hosts formula** : **[2<sup>(32-n)</sup> - 2]**
+* **CIDR block format** - **a.b.c.d/n** *Examples*: 10.192.0.0/16, 10.192.10.0/24 .....
+* **Number of hosts formula** : **[2<sup>(32-n)</sup> - 2]**
 
 ## Basics for creating a TGW in CFN
 
@@ -30,13 +30,15 @@
     | ----------- | ------ |
     | 10.0.0.0/16 | local  |
     | 0.0.0.0/0   | vgw-id |
+    **Figure-2**: Public subnet route table
                          
 - Traffic destined for the intenet is targeted for the internet gateway. If you are having the public subnet, any traffic outside the VPC should be going to the internet gateway
 
     | Destination | Target |
     | ----------- | ------ |
     | 10.0.0.0/16 | local  |
-    | 0.0.0.0/0   | igw-id |                     
+    | 0.0.0.0/0   | igw-id |
+    **Figure-3**: Private subnet route table
 
 - **To enable instances in a private subnet to connect to the Internet, you can create a NAT gateway or launch a NAT instance in a public subnet**, and then add a route for the private subnet that routes IPv4 Internet traffic (0.0.0.0/0) to the NAT device
 - **You can create an egress-only Internet gateway for your VPC to enable instances in a private subnet to initiate outbound communication to the Internet**, but prevent the Internet from initiating connections with the instances
