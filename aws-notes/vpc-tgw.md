@@ -1,4 +1,4 @@
-# VPC and Transit Gateway
+# AWS VPC and Transit Gateway
 
 ## Understanding IP ranges
 
