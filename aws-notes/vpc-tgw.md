@@ -2,16 +2,13 @@
 
 ## Understanding IP ranges
 
-| Class | Bits/Mask (n) | Host bits (32 - n) | Network per class |
-| ----- | ------------- | ------------------ | ----------------- |
-| A     | 8             | 24                 | (2<sup>8-1</sup>) |
-| B     | 16            | 16                 | (2<sup>16-2</sup>)|
-| C     | 24            | 8                  | (2<sup>24-3</sup>)|
+| Class | Bits/Mask (n) | Host bits (32-n) | Total Networks    |
+| :---: | :-----------: | :--------------: | :-------------:   |
+| A     | 8             | 24               | (2<sup>8-1</sup>) |
+| B     | 16            | 16               | (2<sup>16-2</sup>)|
+| C     | 24            | 8                | (2<sup>24-3</sup>)|  
 
-**Figure-1**: IP Address Classes
-
-
-* **CIDR block format** - **a.b.c.d/n** *Examples*: 10.192.0.0/16, 10.192.10.0/24 .....
+* **CIDR block format** - **a.b.c.d/n** *Examples*: 10.192.0.0/16, 10.192.10.0/24
 * **Number of hosts formula** : **[2<sup>(32-n)</sup> - 2]**
 
 ## Basics for creating a TGW in CFN
@@ -27,21 +24,17 @@
 - Traffic destined for the external corporate network 172.16.0.0/12 is targeted for the virtual private gateway. So the customer gateway will be having the address of the corporate network. If you are having the private subnet, any traffic outside the VPC should be going to the corporate network
 
     | Destination | Target |
-    | ----------- | ------ |
+    | :---------: | :----: |
     | 10.0.0.0/16 | local  |
-    | 0.0.0.0/0   | vgw-id |
-    
-    **Figure-2**: Public subnet route table
-                         
+    | 0.0.0.0/0   | vgw-id |  
+             
 - Traffic destined for the intenet is targeted for the internet gateway. If you are having the public subnet, any traffic outside the VPC should be going to the internet gateway
 
     | Destination | Target |
-    | ----------- | ------ |
+    | :---------: | :----: |
     | 10.0.0.0/16 | local  |
     | 0.0.0.0/0   | igw-id |
     
-    **Figure-3**: Private subnet route table
-
 - **To enable instances in a private subnet to connect to the Internet, you can create a NAT gateway or launch a NAT instance in a public subnet**, and then add a route for the private subnet that routes IPv4 Internet traffic (0.0.0.0/0) to the NAT device
 - **You can create an egress-only Internet gateway for your VPC to enable instances in a private subnet to initiate outbound communication to the Internet**, but prevent the Internet from initiating connections with the instances
 - **Route Propagation:** Each attachment comes with routes that can be installed to one or more transit gateway route tables. For a VPC attachment, these are the CIDR blocks of the VPC. For a VPN connection attachment, these are the prefixes that are advertised over the BGP session established with the VPN connection. When an attachment is propagated to a transit gateway route table, these routes are installed in the route table
