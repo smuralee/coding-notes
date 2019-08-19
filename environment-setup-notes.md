@@ -13,7 +13,7 @@ autocmd BufEnter *.tf :setlocal filetype=yaml
   
 ```
 
-## Settings for the .bash_profile
+## Settings for the .bash_profile on Mac
 ```shell
 alias python=python3
 alias pip=pip3
@@ -22,6 +22,37 @@ export M2_HOME=/opt/apache-maven
 export TERRAFORM_HOME=/opt/terraform-install
 export PATH=$PATH:$JAVA_HOME/bin:$M2_HOME/bin:$TERRAFORM_HOME
 
+```
+
+## Settings for the .profile on Linux
+```shell
+# Java Classpath
+JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+export PATH="$JAVA_HOME/bin:$PATH"
+
+# GO Classpath
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# RUST Classpath
+export PATH="$PATH:/usr/local/go/bin"
+
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+
+```
+
+## Settings for the .bashrc on Linux
+
+```shell
+# Alias for the python installations
+alias python=python3
+alias pip=pip3
+
+# Colour scheme for terminal
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;31m\]\w\[\033[00m\]\$ '
+
+export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 ```
 
 ## Setup a Python Virtual Environment
