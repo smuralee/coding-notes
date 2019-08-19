@@ -1,0 +1,31 @@
+# ECS Blogs for reference
+
+- https://aws.amazon.com/blogs/compute/maintaining-transport-layer-security-all-the-way-to-your-container-using-the-network-load-balancer-with-amazon-ecs/
+- https://aws.amazon.com/blogs/compute/maintaining-transport-layer-security-all-the-way-to-your-container-part-2-using-aws-certificate-manager-private-certificate-authority/
+- https://aws.amazon.com/blogs/aws/amazon-ecs-service-discovery/
+- https://aws.amazon.com/blogs/compute/service-discovery-for-amazon-ecs-using-dns/
+- https://aws.amazon.com/blogs/compute/amazon-ecs-and-docker-volume-drivers-amazon-ebs/
+- https://aws.amazon.com/blogs/compute/amazon-ecs-and-docker-volume-drivers-amazon-efs/
+- https://aws.amazon.com/blogs/compute/automating-rollback-of-failed-amazon-ecs-deployments/
+- https://aws.amazon.com/blogs/devops/send-ecs-container-logs-to-cloudwatch-logs-for-centralized-monitoring/
+- https://aws.amazon.com/blogs/compute/centralized-container-logs-with-amazon-ecs-and-amazon-cloudwatch-logs/
+- https://aws.amazon.com/blogs/security/how-to-manage-secrets-for-amazon-ec2-container-service-based-applications-by-using-amazon-s3-and-docker/
+- https://aws.amazon.com/blogs/compute/managing-secrets-for-amazon-ecs-applications-using-parameter-store-and-iam-roles-for-tasks/
+- https://aws.amazon.com/blogs/compute/microservice-delivery-with-amazon-ecs-and-application-load-balancers/
+- https://aws.amazon.com/blogs/compute/nginx-reverse-proxy-sidecar-container-on-amazon-ecs/
+- https://aws.amazon.com/blogs/compute/deploying-java-microservices-on-amazon-ec2-container-service/
+- https://aws.amazon.com/blogs/compute/bluegreen-deployments-with-amazon-ecs/
+- https://aws.amazon.com/blogs/compute/set-up-a-continuous-delivery-pipeline-for-containers-using-aws-codepipeline-and-amazon-ecs/
+- https://aws.amazon.com/blogs/compute/using-federation-with-amazon-ecr/
+- https://aws.amazon.com/blogs/compute/under-the-hood-task-networking-for-amazon-ecs/
+- https://aws.amazon.com/blogs/compute/introducing-cloud-native-networking-for-ecs-containers/
+- https://aws.amazon.com/blogs/storage/taking-crash-consistent-snapshots-across-multiple-amazon-ebs-volumes-on-an-amazon-ec2-instance/
+- https://aws.amazon.com/blogs/storage/protecting-your-data-with-aws-backup/
+- https://aws.amazon.com/blogs/opensource/demystifying-entrypoint-cmd-docker/
+- https://aws.amazon.com/blogs/compute/setting-up-aws-privatelink-for-amazon-ecs-and-amazon-ecr/
+- https://aws.amazon.com/blogs/compute/amazon-ecs-task-placement/
+- https://aws.amazon.com/blogs/compute/setting-up-an-envoy-front-proxy-on-amazon-ecs/
+- https://aws.amazon.com/blogs/compute/building-blocks-of-amazon-ecs/
+- https://aws.amazon.com/blogs/opensource/network-load-balancer-nginx-ingress-controller-eks/
+- https://aws.amazon.com/blogs/networking-and-content-delivery/identifying-unhealthy-targets-of-elastic-load-balancer/
+- https://aws.amazon.com/blogs/opensource/centralized-container-logging-fluent-bit/
