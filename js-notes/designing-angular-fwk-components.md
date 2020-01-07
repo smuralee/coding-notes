@@ -12,11 +12,33 @@ Let's say, we are displaying a products catalog page. For displaying the product
 ## Catalog Component
 Catalog component is responsible for interacting with the Angular HTTP service to fetch the data from REST API. Here is the service code
 
-<script src="https://gist.github.com/smuralee/1f105278274d01c4397825bd325d2c96.js"></script>
+```
+import {Injectable} from '@angular/core';
+   import {Http} from '@angular/http';
+   import {Observable} from 'rxjs/Observable';
+   import {Product} from '../models/product';
+   
+   @Injectable()
+   export class ProductService {
+   
+       constructor(private _http: Http) {
+       }
+   
+       getProducts(): Observable<Product[]> {
+           return this._http.get('/products')
+               .map(res => res.json())
+               .catch(err => Observable.throw(err));
+       }
+   }
+```
 
 The service returns an `Observable` and is invoked by the Catalog component. The catalog component will be responsible to pass the data to the child component i.e. Product list Component.
 
-<script src="https://gist.github.com/smuralee/9872670221f69e6142343ae725a2fdc4.js"></script>
+```
+<div *ngFor="let product of products">
+    {{product.name}}
+</div>
+```
 
 The child component is being referenced via the HTML i.e. `./catalog.component.html`
 
@@ -25,7 +47,22 @@ As seen here, `[products]` is an input parameter, adorned with *@Input() decorat
 ## Product list Component
 The Product list component will only respond to the data being fed from the parent. It is unaware of the existence of the product service and awaits only the products data being sent from the catalog component.
 
-<script src="https://gist.github.com/smuralee/5d6c25ca1f434a9e823e17f824a9bd09.js"></script>
+```
+import {Component, Input} from '@angular/core';
+import {Product} from '../../models/product';
+
+@Component({
+    selector: 'product-list',
+    templateUrl: './product-list.component.html',
+    styleUrls: ['./product-list.component.css']
+})
+export class ProductListComponent {
+
+    @Input()
+    public products: Product[];
+
+}
+```
 
 Hence this component is only responsible for **presentation**
 
