@@ -1,4 +1,4 @@
-# AWS VPC and Transit Gateway
+# AWS Transit Gateway - Part-1
 
 ## Understanding IP ranges
 
@@ -28,7 +28,7 @@
     | 10.0.0.0/16 | local  |
     | 0.0.0.0/0   | vgw-id |  
              
-- Traffic destined for the intenet is targeted for the internet gateway. If you are having the public subnet, any traffic outside the VPC should be going to the internet gateway
+- Traffic destined for the internet is targeted for the internet gateway. If you are having the public subnet, any traffic outside the VPC should be going to the internet gateway
 
     | Destination | Target |
     | :---------: | :----: |
@@ -39,41 +39,3 @@
 - **You can create an egress-only Internet gateway for your VPC to enable instances in a private subnet to initiate outbound communication to the Internet**, but prevent the Internet from initiating connections with the instances
 - **Route Propagation:** Each attachment comes with routes that can be installed to one or more transit gateway route tables. For a VPC attachment, these are the CIDR blocks of the VPC. For a VPN connection attachment, these are the prefixes that are advertised over the BGP session established with the VPN connection. When an attachment is propagated to a transit gateway route table, these routes are installed in the route table
 - **Equal-cost multi-path (ECMP)** is a strategy used in routing to forward traffic to a destination over multiple best paths
-
-## Sharing a TGW
-
-- Amazon Resource Names (ARNs) uniquely identify AWS resources. We require an ARN when you need to specify a resource unambiguously across all of AWS, such as in IAM policies, Amazon Relational Database Service (Amazon RDS) tags, and API calls
-- The OUs ARN can be found by executing the below command for the root. The parent-id is the suffix string you see in the ARN on AWS organization for the root
-- AWS CLI command on root - 
-```shell 
-aws organizations list-organizational-units-for-parent --parent-id a-bcde
-```
-
-```json
-{
-    "OrganizationalUnits": [
-        {
-            "Id": "ou-abcd-abcd0qwer1",
-            "Arn": "arn:aws:organizations::<ROOT-ACCOUNT-ID>:ou/<ROOT-ID>/ou-abcd-abcd0qwer1",
-            "Name": "OU-1"
-        },
-        {
-            "Id": "ou-abcd-abcd0qwer2",
-            "Arn": "arn:aws:organizations::<ROOT-ACCOUNT-ID>:ou/<ROOT-ID>/ou-abcd-abcd0qwer2",
-            "Name": "OU-2"
-        },
-        {
-            "Id": "ou-abcd-abcd0qwer3",
-            "Arn": "arn:aws:organizations::<ROOT-ACCOUNT-ID>:ou/<ROOT-ID>/ou-abcd-abcd0qwer3",
-            "Name": "OU-3"
-        }
-    ]
-}
-
-```
-
-- The TGW resource has a syntax for the ARN - Refer [documentation](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)
-  - Syntax: `arn:aws:ec2:region:account-id:transit-gateway/tgw-id`
-  - CFN Syntax: `!Sub arn:aws:ec2:${AWS::Region}:${AWS::AccountId}:transit-gateway/${TransitGateway}`
-    - !Sub function allows to replace a variable inside a string with the value of a stack parameter
-    - Here `${TransitGateway}` is the resource name within the CFN template

@@ -1,6 +1,6 @@
-# Environment Setup
+# Local Development Settings
 
-## VIM configuration setup
+## VIM configuration
 * Create a .vimrc file in the home directory
 * Add the below snippets to enable *formatting*, *line number*, *file type indent* and *custom file type indent*
 * Supporting .tf file as YAML
@@ -10,10 +10,9 @@ filetype plugin indent on
 syntax on
 set number
 autocmd BufEnter *.tf :setlocal filetype=yaml
-  
 ```
 
-## Settings for the .bash_profile on Mac
+## .bash_profile for MacOS
 
 ```shell
 alias python=python3
@@ -22,10 +21,9 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/OpenJDK-8/Contents/Home
 export M2_HOME=/opt/apache-maven
 export TERRAFORM_HOME=/opt/terraform-install
 export PATH=$PATH:$JAVA_HOME/bin:$M2_HOME/bin:$TERRAFORM_HOME
-
 ```
 
-## Settings for the .profile on Linux
+## .profile on Linux
 
 ```shell
 # Java Classpath
@@ -41,10 +39,9 @@ export PATH="$PATH:/usr/local/go/bin"
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
-
 ```
 
-## Settings for the .bashrc on Linux
+## .bashrc on Linux
 
 ```shell
 # Alias for the python installations
@@ -57,7 +54,7 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[0
 export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 ```
 
-## Setup a Python Virtual Environment
+## Python Virtual Environment
 
 ```shell
 pip install virtualenv
@@ -66,4 +63,23 @@ virtualenv venv
 source venv/bin/activate
 pip install <package>
 deactivate
+```
+
+## Visual Studio Code - settings.json
+
+```json
+{
+    "editor.fontSize": 20,
+    "terminal.integrated.fontSize": 20,
+    "debug.console.fontSize": 20,
+    "markdown.preview.fontSize": 20,
+    "workbench.colorTheme": "Dracula",
+    "editor.minimap.enabled": false,
+    "workbench.iconTheme": "vscode-icons",
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "vsicons.projectDetection.autoReload": true,
+    "editor.formatOnSave": true
+}
 ```

@@ -12,56 +12,85 @@ Let's say, we are displaying a products catalog page. For displaying the product
 ## Catalog Component
 Catalog component is responsible for interacting with the Angular HTTP service to fetch the data from REST API. Here is the service code
 
-```
+```typescript
 import {Injectable} from '@angular/core';
-   import {Http} from '@angular/http';
-   import {Observable} from 'rxjs/Observable';
-   import {Product} from '../models/product';
-   
-   @Injectable()
-   export class ProductService {
-   
-       constructor(private _http: Http) {
-       }
-   
-       getProducts(): Observable<Product[]> {
-           return this._http.get('/products')
-               .map(res => res.json())
-               .catch(err => Observable.throw(err));
-       }
-   }
+import {Http} from '@angular/http';
+import {Observable} from 'rxjs/Observable';
+import {Product} from '../models/product';
+
+@Injectable()
+export class ProductService {
+
+    constructor(private _http: Http) {
+    }
+
+    getProducts(): Observable<Product[]> {
+        return this._http.get('/products')
+            .map(res => res.json())
+            .catch(err => Observable.throw(err));
+    }
+}
 ```
 
 The service returns an `Observable` and is invoked by the Catalog component. The catalog component will be responsible to pass the data to the child component i.e. Product list Component.
 
-```
-<div *ngFor="let product of products">
-    {{product.name}}
-</div>
+```typescript
+import {Component, OnInit} from '@angular/core';
+import {ProductService} from '../../services/product.service';
+import {Observable} from 'rxjs/Observable';
+import {Product} from '../../models/product';
+
+@Component({
+    selector: 'catalog',
+    templateUrl: './catalog.component.html',
+    styleUrls: ['./catalog.component.css']
+})
+export class CatalogComponent implements OnInit {
+
+    private _products$: Observable<Product[]>;
+
+    constructor(private _service: ProductService) {
+    }
+
+    ngOnInit(): void {
+        this._products$ = this._service.getProducts();
+    }
+
+}
 ```
 
-The child component is being referenced via the HTML i.e. `./catalog.component.html`
+The child component is being referenced via the template - `./catalog.component.html`
+
+```
+<product-list [products]="_products$"></product-list>
+```
 
 As seen here, `[products]` is an input parameter, adorned with *@Input() decorators*. The catalog component becomes our **smart** component
 
 ## Product list Component
 The Product list component will only respond to the data being fed from the parent. It is unaware of the existence of the product service and awaits only the products data being sent from the catalog component.
 
-```
+```typescript
 import {Component, Input} from '@angular/core';
 import {Product} from '../../models/product';
 
 @Component({
-    selector: 'product-list',
-    templateUrl: './product-list.component.html',
-    styleUrls: ['./product-list.component.css']
+   selector: 'product-list',
+   templateUrl: './product-list.component.html',
+   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
 
-    @Input()
-    public products: Product[];
+   @Input()
+   public products: Product[];
 
 }
+```
+
+Below is the template `./product-list.component.html`
+
+```
+<div *ngFor="let product of products">{{product.name}}</div>
 ```
 
 Hence this component is only responsible for **presentation**

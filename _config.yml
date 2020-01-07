@@ -1,0 +1,6 @@
+theme: jekyll-theme-minimal
+title: Suraj's Weblog
+description: Weblog for developers
+google_analytics: UA-38387041-4
+plugins:
+  - jekyll-sitemap
