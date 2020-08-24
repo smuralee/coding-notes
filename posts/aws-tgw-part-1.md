@@ -1,4 +1,8 @@
-# AWS Transit Gateway - Part-1
+---
+layout: post
+title: "AWS Transit Gateway - Part-1"
+date: 2019-07-09
+---
 
 ## Understanding IP ranges
 

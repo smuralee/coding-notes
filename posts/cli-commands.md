@@ -1,4 +1,8 @@
-# CLI Commands
+---
+layout: post
+title: "CLI Commands"
+date: 2019-05-04
+---
 
 ## Linux commands
 

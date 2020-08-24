@@ -1,4 +1,8 @@
-# Designing Angular Framework components
+---
+layout: post
+title: "Designing Angular Framework components"
+date: 2017-09-09
+---
 
 Structuring the components is an integral part of designing an effective angular application. We need to ensure separation of concerns for each component within the application. Following the same approach for an enterprise application, we need to categorize which component is your **presentation** component and which is your **smart** component, which interacts with the services.
 

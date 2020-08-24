@@ -1,4 +1,8 @@
-# Custom theme in Angular Framework
+---
+layout: post
+title: "Custom theme in Angular Framework"
+date: 2017-04-13
+---
 
 Angular applications being built by individuals often need custom look and feel. Layout theme becomes an important aspect of for the user interface. For incorporating a custom theme in Angular, we will be using [Angular Material](https://material.angular.io)
 

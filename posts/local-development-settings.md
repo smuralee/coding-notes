@@ -1,4 +1,8 @@
-# Local Development Settings
+---
+layout: post
+title: "Local Development Settings"
+date: 2019-02-02
+---
 
 ## VIM configuration
 * Create a .vimrc file in the home directory
