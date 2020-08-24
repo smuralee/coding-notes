@@ -1,2 +1,10 @@
+# IDE ignores
 *.iml
 .idea/
+
+# Jekyll ignores
+.sass-cache/
+.jekyll-cache/
+_site/
+Gemfile
+Gemfile.lock
