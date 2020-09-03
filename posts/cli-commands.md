@@ -18,9 +18,18 @@ ls -ld .*?
 ## Docker commands
 
 ```shell
+# Install docker and enable on startup
+sudo yum install -y docker
+sudo usermod -a -G docker ec2-user
+sudo systemctl enable docker
+sudo chkconfig docker on
+sudo systemctl start docker
+
 # Delete the docker images and containers
+docker stop $(docker ps -aq)
+docker rm $(docker ps -aq)
+docker rmi $(docker images -aq)
 docker system prune --volumes -f
-docker rmi $(docker images -q)
 docker system prune -a
 ```
 
